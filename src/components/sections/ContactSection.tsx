@@ -62,16 +62,10 @@ const ContactSection = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <GlassButton variant="accent" size="lg">
-          <Mail className="w-5 h-5" />
-          Start a Project
-        </GlassButton>
-
         {/* Footer */}
         <div className="mt-24 pt-8 border-t border-border/30">
           <p className="text-sm text-muted-foreground">
-            © 2024 Jascore.aep. Crafted with precision.
+            © 2025 Jascore.aep. Crafted with precision.
           </p>
         </div>
       </div>
