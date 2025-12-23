@@ -5,8 +5,8 @@ const contactLinks = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@jascore.aep",
-    href: "mailto:hello@jascore.aep",
+    value: "jascore.aep@gmail.com",
+    href: "mailto:jascore.aep@gmail.com",
   },
   {
     icon: Instagram,
