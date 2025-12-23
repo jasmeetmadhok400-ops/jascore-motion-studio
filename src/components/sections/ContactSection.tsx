@@ -17,8 +17,8 @@ const contactLinks = [
   {
     icon: ExternalLink,
     label: "Fiverr",
-    value: "jascore",
-    href: "https://fiverr.com/jascore",
+    value: "View Gig",
+    href: "https://www.fiverr.com/s/99ZEZ4j",
   },
 ];
 
