@@ -28,8 +28,9 @@ const WorkSection = () => {
         <div className="flex justify-center">
           <div className="w-full max-w-lg">
             <VideoCard
-              title="Brand Commercial #1"
-              description="Concept advertisement for a tech brand"
+              src="/videos/wise-ad.mp4"
+              title="Wise Commercial"
+              description="Concept advertisement for Wise"
               aspectRatio="1/1"
             />
           </div>
