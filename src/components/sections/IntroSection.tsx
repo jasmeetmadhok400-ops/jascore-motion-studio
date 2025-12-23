@@ -1,5 +1,6 @@
 import { GlassButton } from "@/components/GlassButton";
 import { Play } from "lucide-react";
+import jascoreLogo from "@/assets/jascore-logo.png";
 
 const IntroSection = () => {
   const scrollToWork = () => {
@@ -22,8 +23,8 @@ const IntroSection = () => {
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Logo */}
         <div className="mb-8 animate-fade-up">
-          <div className="inline-flex items-center justify-center w-32 h-32 rounded-full glass mb-6">
-            <span className="text-4xl font-bold text-gradient-purple">J</span>
+          <div className="inline-flex items-center justify-center w-32 h-32 rounded-full overflow-hidden mb-6">
+            <img src={jascoreLogo} alt="Jascore Logo" className="w-full h-full object-cover" />
           </div>
         </div>
 
