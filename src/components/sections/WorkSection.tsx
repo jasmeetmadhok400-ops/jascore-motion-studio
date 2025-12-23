@@ -24,27 +24,15 @@ const WorkSection = () => {
           </p>
         </div>
 
-        {/* Featured Video - 16:9 */}
-        <div className="mb-8">
-          <VideoCard
-            title="Introduction Reel"
-            description="A compilation of my best work showcasing UI/UX motion design"
-            aspectRatio="16/9"
-          />
-        </div>
-
-        {/* Two Square Videos - 1:1 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <VideoCard
-            title="Brand Commercial #1"
-            description="Concept advertisement for a tech brand"
-            aspectRatio="1/1"
-          />
-          <VideoCard
-            title="Brand Commercial #2"
-            description="Concept advertisement for a lifestyle brand"
-            aspectRatio="1/1"
-          />
+        {/* Single Square Video - 1:1 */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-lg">
+            <VideoCard
+              title="Brand Commercial #1"
+              description="Concept advertisement for a tech brand"
+              aspectRatio="1/1"
+            />
+          </div>
         </div>
       </div>
     </section>

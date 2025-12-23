@@ -1,9 +1,13 @@
 import { GlassButton } from "@/components/GlassButton";
-import { ArrowDown, Play } from "lucide-react";
+import { Play } from "lucide-react";
 
 const IntroSection = () => {
   const scrollToWork = () => {
     document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -18,8 +22,8 @@ const IntroSection = () => {
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Logo */}
         <div className="mb-8 animate-fade-up">
-          <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl glass mb-6">
-            <span className="text-3xl font-bold text-gradient-purple">J</span>
+          <div className="inline-flex items-center justify-center w-32 h-32 rounded-full glass mb-6">
+            <span className="text-4xl font-bold text-gradient-purple">J</span>
           </div>
         </div>
 
@@ -30,7 +34,7 @@ const IntroSection = () => {
         </h1>
 
         {/* Tagline */}
-        <p className="text-xl md:text-2xl text-muted-foreground font-light mb-8 animate-fade-up-delay-2">
+        <p className="text-xl md:text-2xl text-muted-foreground font-semibold mb-8 animate-fade-up-delay-2">
           Apple Style UI/UX Motion Graphics
         </p>
 
@@ -59,14 +63,9 @@ const IntroSection = () => {
             <Play className="w-5 h-5" />
             View My Work
           </GlassButton>
-          <GlassButton size="lg">
+          <GlassButton size="lg" onClick={scrollToContact}>
             Get in Touch
           </GlassButton>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-fade-up-delay-3">
-          <div className="scroll-indicator" />
         </div>
       </div>
     </section>
