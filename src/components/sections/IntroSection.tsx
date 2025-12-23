@@ -47,7 +47,7 @@ const IntroSection = () => {
 
         {/* Software Tags */}
         <div className="flex flex-wrap justify-center gap-3 mb-12 animate-fade-up-delay-3">
-          {["After Effects", "Cinema 4D", "Blender", "Premiere Pro"].map((software) => (
+          {["After Effects"].map((software) => (
             <span
               key={software}
               className="px-4 py-2 rounded-full text-sm text-muted-foreground border border-border/50 bg-secondary/30"
