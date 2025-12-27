@@ -1,24 +1,23 @@
 import { GlassButton } from "@/components/GlassButton";
 import { Play } from "lucide-react";
 import jascoreLogo from "@/assets/jascore-logo.png";
-
 const IntroSection = () => {
   const scrollToWork = () => {
-    document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("work")?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
   const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <section
-      id="intro"
-      className="section-container relative min-h-screen"
-    >
+  return <section id="intro" className="section-container relative min-h-screen">
       {/* Decorative Elements */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/5 rounded-full blur-[100px] animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent/10 rounded-full blur-[80px] animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
+      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent/10 rounded-full blur-[80px] animate-pulse-glow" style={{
+      animationDelay: "1.5s"
+    }} />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Logo */}
@@ -40,22 +39,13 @@ const IntroSection = () => {
         </p>
 
         {/* Description */}
-        <p className="text-base md:text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-up-delay-3">
-          Crafting seamless motion experiences that blend elegance with functionality. 
-          Specializing in After Effects, Cinema 4D, and Blender to bring brands to life 
-          through cinematic visuals and fluid animations.
-        </p>
+        <p className="text-base md:text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-up-delay-3">Crafting seamless motion experiences that blend elegance with functionality. Specializing in After Effects, to bring brands to life through cinematic visuals and fluid animations.</p>
 
         {/* Software Tags */}
         <div className="flex flex-wrap justify-center gap-3 mb-12 animate-fade-up-delay-3">
-          {["After Effects"].map((software) => (
-            <span
-              key={software}
-              className="px-4 py-2 rounded-full text-sm text-muted-foreground border border-border/50 bg-secondary/30"
-            >
+          {["After Effects"].map(software => <span key={software} className="px-4 py-2 rounded-full text-sm text-muted-foreground border border-border/50 bg-secondary/30">
               {software}
-            </span>
-          ))}
+            </span>)}
         </div>
 
         {/* CTA Buttons */}
@@ -69,8 +59,6 @@ const IntroSection = () => {
           </GlassButton>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default IntroSection;
