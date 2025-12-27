@@ -31,7 +31,7 @@ const IntroSection = () => {
         {/* Name */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 animate-fade-up-delay-1">
           <span className="text-gradient">Jascore</span>
-          <span className="text-muted-foreground text-2xl md:text-3xl lg:text-4xl font-light">.aep</span>
+          <span className="text-muted-foreground font-light">.aep</span>
         </h1>
 
         {/* Tagline */}
