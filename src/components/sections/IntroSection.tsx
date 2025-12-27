@@ -23,7 +23,7 @@ const IntroSection = () => {
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Logo */}
         <div className="mb-8 animate-fade-up">
-          <div className="inline-flex items-center justify-center w-32 h-32 rounded-full overflow-hidden mb-6">
+          <div className="inline-flex items-center justify-center w-40 h-40 rounded-full overflow-hidden mb-6 ring-2 ring-border/50 ring-offset-4 ring-offset-background">
             <img src={jascoreLogo} alt="Jascore Logo" className="w-full h-full object-cover" />
           </div>
         </div>
