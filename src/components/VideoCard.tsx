@@ -8,6 +8,7 @@ interface VideoCardProps {
   description?: string;
   aspectRatio?: "16/9" | "1/1";
   className?: string;
+  cropVertical?: boolean; // Crop 9:16 video to 1:1 by showing only the center
 }
 
 const VideoCard = ({
@@ -17,6 +18,7 @@ const VideoCard = ({
   description,
   aspectRatio = "16/9",
   className = "",
+  cropVertical = false,
 }: VideoCardProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -82,15 +84,20 @@ const VideoCard = ({
     >
       {/* Placeholder or Video */}
       {src ? (
-        <video
-          ref={videoRef}
-          src={src}
-          poster={poster}
-          className="w-full h-full object-cover"
-          loop
-          playsInline
-          muted
-        />
+        <div className={`w-full h-full overflow-hidden ${cropVertical ? 'flex items-center' : ''}`}>
+          <video
+            ref={videoRef}
+            src={src}
+            poster={poster}
+            className={cropVertical 
+              ? "w-full scale-[1.78] object-cover" 
+              : "w-full h-full object-cover"
+            }
+            loop
+            playsInline
+            muted
+          />
+        </div>
       ) : (
         <div className="w-full h-full bg-card flex items-center justify-center">
           <div className="text-center p-6">
