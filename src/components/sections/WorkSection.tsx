@@ -24,16 +24,21 @@ const WorkSection = () => {
           </p>
         </div>
 
-        {/* Single Square Video - 1:1 */}
-        <div className="flex justify-center">
-          <div className="w-full max-w-lg">
-            <VideoCard
-              src="/videos/wise-ad.mp4"
-              title="Wise Commercial"
-              description="Concept advertisement for Wise"
-              aspectRatio="1/1"
-            />
-          </div>
+        {/* Two Square Videos - 1:1 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <VideoCard
+            src="/videos/wise-ad.mp4"
+            title="Wise Commercial"
+            description="Concept advertisement for Wise"
+            aspectRatio="1/1"
+          />
+          <VideoCard
+            src="/videos/uber-ad.mp4"
+            title="Uber Commercial"
+            description="Concept advertisement for Uber"
+            aspectRatio="1/1"
+            cropVertical
+          />
         </div>
       </div>
     </section>
