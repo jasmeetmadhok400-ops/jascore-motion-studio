@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Play, Pause, Volume2 } from "lucide-react";
+import { Play } from "lucide-react";
 
 interface VideoCardProps {
   src?: string;
@@ -8,7 +8,7 @@ interface VideoCardProps {
   description?: string;
   aspectRatio?: "16/9" | "1/1";
   className?: string;
-  cropVertical?: boolean; // Crop 9:16 video to 1:1 by showing only the center
+  cropVertical?: boolean;
 }
 
 const VideoCard = ({
@@ -22,56 +22,16 @@ const VideoCard = ({
 }: VideoCardProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-  const fadeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    if (videoRef.current) {
-      // Clear any existing fade timeout
-      if (fadeTimeoutRef.current) {
-        clearTimeout(fadeTimeoutRef.current);
-      }
-      
-      videoRef.current.muted = false;
-      videoRef.current.volume = 0;
+  const handleClick = () => {
+    if (!videoRef.current) return;
+    
+    if (isPlaying) {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    } else {
       videoRef.current.play();
       setIsPlaying(true);
-
-      // Fade in audio
-      let volume = 0;
-      const fadeIn = setInterval(() => {
-        if (videoRef.current && volume < 1) {
-          volume = Math.min(volume + 0.1, 1);
-          videoRef.current.volume = volume;
-        } else {
-          clearInterval(fadeIn);
-        }
-      }, 50);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    if (videoRef.current) {
-      // Fade out audio
-      let volume = videoRef.current.volume;
-      const fadeOut = setInterval(() => {
-        if (videoRef.current && volume > 0) {
-          volume = Math.max(volume - 0.1, 0);
-          videoRef.current.volume = volume;
-        } else {
-          clearInterval(fadeOut);
-          if (videoRef.current) {
-            videoRef.current.pause();
-            setIsPlaying(false);
-          }
-        }
-      }, 50);
-
-      fadeTimeoutRef.current = setTimeout(() => {
-        clearInterval(fadeOut);
-      }, 600);
     }
   };
 
@@ -79,8 +39,7 @@ const VideoCard = ({
     <div
       className={`video-container group cursor-pointer ${className}`}
       style={{ aspectRatio }}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
     >
       {/* Placeholder or Video */}
       {src ? (
@@ -95,7 +54,6 @@ const VideoCard = ({
             }
             loop
             playsInline
-            muted
           />
         </div>
       ) : (
@@ -109,27 +67,27 @@ const VideoCard = ({
         </div>
       )}
 
-      {/* Overlay */}
-      <div className={`absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent transition-opacity duration-500 ${isHovered ? "opacity-0" : "opacity-100"}`}>
-        <div className="absolute bottom-0 left-0 right-0 p-6">
-          <h4 className="text-lg font-semibold text-foreground mb-1">{title}</h4>
-          {description && (
-            <p className="text-sm text-muted-foreground">{description}</p>
-          )}
+      {/* Play Button Overlay */}
+      <div 
+        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
+          isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
+      >
+        <div className="w-16 h-16 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center border border-border/50">
+          <Play className="w-7 h-7 text-foreground ml-1" fill="currentColor" />
         </div>
       </div>
 
-      {/* Play/Pause Indicator */}
-      <div className={`absolute top-4 right-4 w-10 h-10 rounded-full glass flex items-center justify-center transition-all duration-300 ${isHovered ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}>
-        {isPlaying ? (
-          <Volume2 className="w-5 h-5 text-accent" />
-        ) : (
-          <Play className="w-5 h-5 text-foreground" />
+      {/* Title Overlay */}
+      <div className={`absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent transition-opacity duration-300 ${isPlaying ? "opacity-0" : "opacity-100"}`}>
+        <h4 className="text-lg font-semibold text-foreground mb-1">{title}</h4>
+        {description && (
+          <p className="text-sm text-muted-foreground">{description}</p>
         )}
       </div>
 
       {/* Hover Border Glow */}
-      <div className={`absolute inset-0 rounded-2xl border-2 border-accent/0 transition-all duration-500 pointer-events-none ${isHovered ? "border-accent/30" : ""}`} />
+      <div className={`absolute inset-0 rounded-2xl border-2 border-accent/0 transition-all duration-500 pointer-events-none group-hover:border-accent/30`} />
     </div>
   );
 };
