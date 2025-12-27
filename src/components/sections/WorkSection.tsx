@@ -35,9 +35,8 @@ const WorkSection = () => {
           <VideoCard
             src="/videos/uber-ad.mp4"
             title="Uber Commercial"
-            description="Concept advertisement for Uber"
+            description="Uber app showcase"
             aspectRatio="1/1"
-            cropVertical
           />
         </div>
       </div>
