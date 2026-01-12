@@ -1,5 +1,5 @@
 import { GlassButton } from "@/components/GlassButton";
-import { Mail, Instagram, ExternalLink } from "lucide-react";
+import { Mail, Instagram, ExternalLink, Youtube } from "lucide-react";
 
 const contactLinks = [
   {
@@ -61,6 +61,22 @@ const ContactSection = () => {
             </a>
           ))}
         </div>
+
+        {/* YouTube Promo Box */}
+        <a
+          href="https://www.youtube.com/@Jasmeet_ae"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="glass-card group hover:border-accent/30 transition-all duration-500 flex items-center gap-4 max-w-md mx-auto"
+        >
+          <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center shrink-0 group-hover:bg-red-500/20 transition-colors duration-500">
+            <Youtube className="w-6 h-6 text-red-500" />
+          </div>
+          <div className="text-left">
+            <p className="text-sm text-muted-foreground">Need other types of videos?</p>
+            <p className="text-base font-medium text-foreground">Check out my YouTube for more!</p>
+          </div>
+        </a>
 
         {/* Footer */}
         <div className="mt-24 pt-8 border-t border-border/30">
