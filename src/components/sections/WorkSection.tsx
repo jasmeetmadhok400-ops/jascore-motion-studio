@@ -26,14 +26,14 @@ const WorkSection = () => {
 
         {/* SaaS Work Section */}
         <div className="mb-16">
-          <h3 className="text-xl md:text-2xl font-semibold text-muted-foreground mb-6 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
             SaaS Work
           </h3>
           <div className="max-w-4xl mx-auto">
             <VideoCard
               src="/videos/chatgpt-sfx.mp4"
-              title="ChatGPT SFX"
-              description="Motion graphics for AI interface"
+              title="ChatGPT"
+              description="Concept motion design work for ChatGPT."
               aspectRatio="16/9"
             />
           </div>
@@ -41,7 +41,7 @@ const WorkSection = () => {
 
         {/* Apple Style Showcase Section */}
         <div>
-          <h3 className="text-xl md:text-2xl font-semibold text-muted-foreground mb-6 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
             Apple Style Showcase
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">

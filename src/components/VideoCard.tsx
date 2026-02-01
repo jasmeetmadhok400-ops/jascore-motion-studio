@@ -95,7 +95,6 @@ const VideoCard = ({
             }
             loop
             playsInline
-            muted
             preload="metadata"
           />
         </div>
