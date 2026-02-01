@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Play } from "lucide-react";
 
 interface VideoCardProps {
@@ -22,6 +22,45 @@ const VideoCard = ({
 }: VideoCardProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+
+  // Handle hover-based playback with sound fade
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (isHovering) {
+      video.volume = 0;
+      video.play().then(() => {
+        setIsPlaying(true);
+        // Fade in volume
+        let vol = 0;
+        const fadeIn = setInterval(() => {
+          if (vol < 0.7) {
+            vol = Math.min(vol + 0.1, 0.7);
+            video.volume = vol;
+          } else {
+            clearInterval(fadeIn);
+          }
+        }, 50);
+      }).catch(() => {
+        // Autoplay blocked, ignore
+      });
+    } else {
+      // Fade out volume then pause
+      let vol = video.volume;
+      const fadeOut = setInterval(() => {
+        if (vol > 0) {
+          vol = Math.max(vol - 0.1, 0);
+          video.volume = vol;
+        } else {
+          clearInterval(fadeOut);
+          video.pause();
+          setIsPlaying(false);
+        }
+      }, 50);
+    }
+  }, [isHovering]);
 
   const handleClick = () => {
     if (!videoRef.current) return;
@@ -40,6 +79,8 @@ const VideoCard = ({
       className={`video-container group cursor-pointer ${className}`}
       style={{ aspectRatio }}
       onClick={handleClick}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
     >
       {/* Placeholder or Video */}
       {src ? (
@@ -54,6 +95,8 @@ const VideoCard = ({
             }
             loop
             playsInline
+            muted
+            preload="metadata"
           />
         </div>
       ) : (
