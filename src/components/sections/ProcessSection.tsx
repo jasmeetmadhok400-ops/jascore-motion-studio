@@ -27,16 +27,13 @@ const ProcessSection = () => {
       id="process"
       className="section-container relative"
     >
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px]" />
-
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-accent text-sm font-medium tracking-widest uppercase mb-4">
+          <p className="text-muted-foreground text-sm font-medium tracking-widest uppercase mb-4">
             The Process
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
             How I Work
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -49,17 +46,17 @@ const ProcessSection = () => {
           {processSteps.map((step, index) => (
             <div
               key={step.number}
-              className="glass-card group hover:border-accent/20 transition-all duration-500"
+              className="glass-card group hover:border-muted-foreground/20 transition-all duration-500"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Step Number */}
-              <span className="text-6xl font-bold text-accent/10 absolute top-6 right-6 group-hover:text-accent/20 transition-colors duration-500">
+              <span className="text-6xl font-bold text-muted/50 absolute top-6 right-6 group-hover:text-muted-foreground/20 transition-colors duration-500">
                 {step.number}
               </span>
 
               {/* Icon */}
-              <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-500">
-                <step.icon className="w-7 h-7 text-accent" />
+              <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center mb-6 group-hover:bg-muted-foreground/10 transition-colors duration-500">
+                <step.icon className="w-7 h-7 text-muted-foreground" />
               </div>
 
               {/* Content */}
@@ -71,7 +68,7 @@ const ProcessSection = () => {
               </p>
 
               {/* Bottom Accent Line */}
-              <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-muted-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           ))}
         </div>
