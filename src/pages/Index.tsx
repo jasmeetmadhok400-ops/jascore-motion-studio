@@ -13,10 +13,10 @@ const Index = () => {
       {/* Navigation */}
       <Navigation />
       
-      {/* Sections */}
+      {/* Sections - Work now comes before Process */}
       <IntroSection />
-      <ProcessSection />
       <WorkSection />
+      <ProcessSection />
       <ContactSection />
     </main>
   );

@@ -56,7 +56,7 @@ const ProcessSection = () => {
 
               {/* Icon */}
               <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center mb-6 group-hover:bg-muted-foreground/10 transition-colors duration-500">
-                <step.icon className="w-7 h-7 text-accent" />
+                <step.icon className="w-7 h-7 text-muted-foreground" />
               </div>
 
               {/* Content */}
@@ -68,7 +68,7 @@ const ProcessSection = () => {
               </p>
 
               {/* Bottom Accent Line */}
-              <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-muted-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           ))}
         </div>

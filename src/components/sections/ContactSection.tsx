@@ -64,7 +64,7 @@ const ContactSection = () => {
           href="https://www.youtube.com/@Jasmeet_ae"
           target="_blank"
           rel="noopener noreferrer"
-          className="glass-card group hover:border-accent/30 transition-all duration-500 flex items-center gap-4 max-w-md mx-auto"
+          className="glass-card group hover:border-muted-foreground/30 transition-all duration-500 flex items-center gap-4 max-w-md mx-auto"
         >
           <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center shrink-0 group-hover:bg-red-500/20 transition-colors duration-500">
             <Youtube className="w-6 h-6 text-red-500" />
