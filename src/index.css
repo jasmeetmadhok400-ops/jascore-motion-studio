@@ -173,11 +173,11 @@
     @apply relative overflow-hidden rounded-3xl p-8;
     background: linear-gradient(
       180deg,
-      hsl(0 0% 100%) 0%,
-      hsl(0 0% 98%) 100%
+      hsl(var(--background)) 0%,
+      hsl(var(--card)) 100%
     );
-    border: 1px solid hsl(0 0% 0% / 0.08);
-    box-shadow: 0 24px 48px hsl(0 0% 0% / 0.06);
+    border: 1px solid hsl(var(--foreground) / 0.08);
+    box-shadow: 0 24px 48px hsl(var(--foreground) / 0.06);
   }
 
   .glass-card::before {
@@ -185,7 +185,7 @@
     @apply absolute inset-0 pointer-events-none;
     background: linear-gradient(
       180deg,
-      hsl(0 0% 100% / 0.8) 0%,
+      hsl(var(--background) / 0.8) 0%,
       transparent 30%
     );
     border-radius: inherit;
