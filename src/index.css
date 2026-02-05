@@ -240,23 +240,6 @@
   }
 }
 
-  /* Scroll indicator */
-  .scroll-indicator {
-    @apply w-6 h-10 rounded-full border-2 border-foreground/20 flex items-start justify-center p-2;
-  }
-
-  .scroll-indicator::before {
-    content: '';
-    @apply w-1 h-2 bg-foreground/40 rounded-full;
-    animation: scroll-bounce 2s ease-in-out infinite;
-  }
-
-  @keyframes scroll-bounce {
-    0%, 100% { transform: translateY(0); opacity: 1; }
-    50% { transform: translateY(8px); opacity: 0.3; }
-  }
-}
-
 @layer utilities {
   .animate-fade-up {
     animation: fade-up 0.8s ease-out forwards;
