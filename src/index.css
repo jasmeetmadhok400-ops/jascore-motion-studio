@@ -194,9 +194,9 @@
   /* Video Container */
   .video-container {
     @apply relative overflow-hidden rounded-2xl;
-    background: hsl(0 0% 98%);
-    border: 1px solid hsl(0 0% 0% / 0.08);
-    box-shadow: 0 16px 48px hsl(0 0% 0% / 0.1);
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--foreground) / 0.08);
+    box-shadow: 0 16px 48px hsl(var(--foreground) / 0.1);
   }
 
   .video-container::before {
@@ -204,7 +204,7 @@
     @apply absolute inset-0 pointer-events-none z-10 opacity-0 transition-opacity duration-500;
     background: linear-gradient(
       180deg,
-      hsl(0 0% 0% / 0.02) 0%,
+      hsl(var(--foreground) / 0.02) 0%,
       transparent 50%
     );
   }
