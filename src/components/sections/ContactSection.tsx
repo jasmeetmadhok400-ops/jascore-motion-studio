@@ -28,15 +28,12 @@ const ContactSection = () => {
       id="contact"
       className="section-container relative min-h-screen"
     >
-      {/* Background Gradient */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/10 rounded-full blur-[150px]" />
-
       <div className="max-w-4xl mx-auto relative z-10 text-center">
         {/* Section Header */}
-        <p className="text-accent text-sm font-medium tracking-widest uppercase mb-4">
+        <p className="text-muted-foreground text-sm font-medium tracking-widest uppercase mb-4">
           Let's Connect
         </p>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
           Get in Touch
         </h2>
         <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-16">
@@ -51,10 +48,10 @@ const ContactSection = () => {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card group hover:border-accent/30 transition-all duration-500 text-center"
+              className="glass-card group hover:border-muted-foreground/30 transition-all duration-500 text-center"
             >
-              <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors duration-500">
-                <link.icon className="w-7 h-7 text-accent" />
+              <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center mx-auto mb-4 group-hover:bg-muted-foreground/10 transition-colors duration-500">
+                <link.icon className="w-7 h-7 text-muted-foreground" />
               </div>
               <p className="text-sm text-muted-foreground mb-1">{link.label}</p>
               <p className="text-lg font-medium text-foreground">{link.value}</p>
