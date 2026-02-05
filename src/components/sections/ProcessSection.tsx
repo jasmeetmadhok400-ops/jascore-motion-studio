@@ -46,16 +46,16 @@ const ProcessSection = () => {
           {processSteps.map((step, index) => (
             <div
               key={step.number}
-              className="glass-card group hover:border-accent/20 transition-all duration-500"
+              className="glass-card group hover:border-muted-foreground/20 transition-all duration-500"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Step Number */}
-              <span className="text-6xl font-bold text-accent/10 absolute top-6 right-6 group-hover:text-accent/20 transition-colors duration-500">
+              <span className="text-6xl font-bold text-muted/50 absolute top-6 right-6 group-hover:text-muted-foreground/20 transition-colors duration-500">
                 {step.number}
               </span>
 
               {/* Icon */}
-              <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-500">
+              <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center mb-6 group-hover:bg-muted-foreground/10 transition-colors duration-500">
                 <step.icon className="w-7 h-7 text-accent" />
               </div>
 
