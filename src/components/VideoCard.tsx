@@ -132,7 +132,7 @@ const VideoCard = ({
       </div>
 
       {/* Title Overlay */}
-      <div className={`absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent transition-opacity duration-300 ${isPlaying ? "opacity-0" : "opacity-100"}`}>
+      <div className={`absolute bottom-0 left-0 right-0 p-6 z-[6] bg-gradient-to-t from-background/90 to-transparent transition-opacity duration-300 ${isPlaying ? "opacity-0" : "opacity-100"}`}>
         <h4 className="text-lg font-semibold text-foreground mb-1">{title}</h4>
         {description && (
           <p className="text-sm text-muted-foreground">{description}</p>
