@@ -78,7 +78,7 @@ const ContactSection = () => {
         {/* Footer */}
         <div className="mt-24 pt-8 border-t border-border/30">
           <p className="text-sm text-muted-foreground">
-            © 2025 Jascore.aep. Crafted with precision.
+            © 2026 Jascore.aep. Crafted with precision.
           </p>
         </div>
       </div>

@@ -25,6 +25,7 @@ const VideoCard = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
+  const [hasPlayed, setHasPlayed] = useState(false);
 
   // Handle hover-based playback with sound fade
   useEffect(() => {
@@ -112,11 +113,12 @@ const VideoCard = ({
       )}
 
       {/* White overlay for dark first-frame videos */}
-      {whiteOverlay && (
+      {whiteOverlay && !hasPlayed && (
         <div
           className={`absolute inset-0 bg-background z-[5] transition-opacity duration-200 pointer-events-none ${
             isHovering ? "opacity-0" : "opacity-100"
           }`}
+          onTransitionEnd={() => { if (isHovering) setHasPlayed(true); }}
         />
       )}
 
