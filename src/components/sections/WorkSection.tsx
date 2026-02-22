@@ -52,6 +52,7 @@ const WorkSection = () => {
               title="Uber Commercial"
               description="Uber app showcase"
               aspectRatio="1/1"
+              whiteOverlay
             />
           </div>
         </div>

@@ -9,6 +9,7 @@ interface VideoCardProps {
   aspectRatio?: "16/9" | "1/1";
   className?: string;
   cropVertical?: boolean;
+  whiteOverlay?: boolean;
 }
 
 const VideoCard = ({
@@ -19,6 +20,7 @@ const VideoCard = ({
   aspectRatio = "16/9",
   className = "",
   cropVertical = false,
+  whiteOverlay = false,
 }: VideoCardProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -107,6 +109,15 @@ const VideoCard = ({
             <p className="text-muted-foreground text-sm">Video placeholder</p>
           </div>
         </div>
+      )}
+
+      {/* White overlay for dark first-frame videos */}
+      {whiteOverlay && (
+        <div
+          className={`absolute inset-0 bg-background z-[5] transition-opacity duration-200 pointer-events-none ${
+            isHovering ? "opacity-0" : "opacity-100"
+          }`}
+        />
       )}
 
       {/* Play Button Overlay */}
