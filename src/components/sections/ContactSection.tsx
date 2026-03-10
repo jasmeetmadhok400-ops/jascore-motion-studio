@@ -33,7 +33,7 @@ const ContactSection = () => {
         <p className="text-muted-foreground text-sm font-medium tracking-widest uppercase mb-4">
           Let's Connect
         </p>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 700 }}>
           Get in Touch
         </h2>
         <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-16">

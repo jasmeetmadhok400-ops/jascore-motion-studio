@@ -60,7 +60,7 @@ const ProcessSection = () => {
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl font-semibold mb-4 text-foreground">
+              <h3 className="text-2xl mb-4 text-foreground" style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 500 }}>
                 {step.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
