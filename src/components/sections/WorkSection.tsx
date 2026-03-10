@@ -22,7 +22,7 @@ const WorkSection = () => {
 
         {/* SaaS Work Section */}
         <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center" style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 500 }}>
             SaaS Work
           </h3>
           <div className="max-w-4xl mx-auto">
