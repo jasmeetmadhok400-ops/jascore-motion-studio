@@ -25,11 +25,17 @@ const WorkSection = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center" style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 500 }}>
             SaaS Work
           </h3>
-          <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <VideoCard
               src="/videos/chatgpt-sfx.mp4"
               title="ChatGPT"
               description="Concept motion design work for ChatGPT."
+              aspectRatio="16/9"
+            />
+            <VideoCard
+              src="/videos/instagram-sfx.mp4"
+              title="Instagram"
+              description="Spec commercial for Instagram."
               aspectRatio="16/9"
             />
           </div>
