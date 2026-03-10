@@ -37,7 +37,7 @@ const WorkSection = () => {
 
         {/* Apple Style Showcase Section */}
         <div>
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center" style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 500 }}>
             Apple Style Showcase
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
