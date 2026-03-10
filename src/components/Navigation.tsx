@@ -23,7 +23,7 @@ const Navigation = () => {
         {/* Logo on the left */}
         <span 
           className="text-lg font-bold text-foreground"
-          style={{ fontFamily: "'Whyte Inktrap', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}
+          style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 700 }}
         >
           Jascore
         </span>
