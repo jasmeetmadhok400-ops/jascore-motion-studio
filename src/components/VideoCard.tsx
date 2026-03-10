@@ -85,9 +85,6 @@ const VideoCard = ({
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-    >
       {/* Placeholder or Video */}
       {src ? (
         <div className={`w-full h-full overflow-hidden ${cropVertical ? 'flex items-center' : ''}`}>
