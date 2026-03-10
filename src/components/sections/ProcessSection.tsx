@@ -33,7 +33,7 @@ const ProcessSection = () => {
           <p className="text-muted-foreground text-sm font-medium tracking-widest uppercase mb-4">
             The Process
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 700 }}>
             How I Work
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
