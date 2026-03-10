@@ -25,8 +25,8 @@ const WorkSection = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center" style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 500 }}>
             SaaS Work
           </h3>
-          <div className="flex flex-col md:flex-row gap-6 max-w-4xl mx-auto items-start">
-            <div className="flex-1">
+          <div className="flex flex-col md:flex-row gap-6 max-w-5xl mx-auto items-stretch">
+            <div className="md:w-[65%]">
               <VideoCard
                 src="/videos/chatgpt-sfx.mp4"
                 title="ChatGPT"
@@ -34,12 +34,13 @@ const WorkSection = () => {
                 aspectRatio="16/9"
               />
             </div>
-            <div className="w-full md:w-auto">
+            <div className="md:w-[35%]">
               <VideoCard
                 src="/videos/instagram-sfx.mp4"
                 title="Instagram"
                 description="Spec commercial for Instagram."
                 aspectRatio="9/16"
+                className="h-full"
               />
             </div>
           </div>
