@@ -38,7 +38,7 @@ const IntroSection = () => {
 
         {/* Tagline */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 animate-fade-up-delay-2" style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 500 }}>
-          Apple Style UI/UX Motion Graphics
+          UI/UX Motion Designer
         </p>
 
         {/* Description */}

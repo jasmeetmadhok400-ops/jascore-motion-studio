@@ -19,22 +19,22 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background">
-      <div className="flex items-center justify-between px-6 py-4">
+      <div className="flex items-center justify-between px-4 md:px-6 py-3 md:py-4">
         {/* Logo on the left */}
         <span 
-          className="text-lg font-bold text-foreground"
+          className="text-lg font-bold text-foreground shrink-0"
           style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 700 }}
         >
           Jascore
         </span>
 
         {/* Nav links in center */}
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-3 md:gap-8">
           {navItems.map((item) => (
             <button
               key={item.label}
               onClick={() => handleClick(item.href)}
-              className="text-sm text-foreground hover:text-muted-foreground transition-colors duration-200"
+              className="text-xs md:text-sm text-foreground hover:text-muted-foreground transition-colors duration-200 whitespace-nowrap"
               style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 300 }}
             >
               {item.label}
@@ -45,13 +45,13 @@ const Navigation = () => {
         {/* Theme toggle on the right */}
         <button
           onClick={toggleTheme}
-          className="p-2 rounded-full hover:bg-muted transition-colors duration-200"
+          className="p-1.5 md:p-2 rounded-full hover:bg-muted transition-colors duration-200 shrink-0"
           aria-label="Toggle theme"
         >
           {theme === "dark" ? (
-            <Sun className="w-5 h-5 text-foreground" />
+            <Sun className="w-4 h-4 md:w-5 md:h-5 text-foreground" />
           ) : (
-            <Moon className="w-5 h-5 text-foreground" />
+            <Moon className="w-4 h-4 md:w-5 md:h-5 text-foreground" />
           )}
         </button>
       </div>
