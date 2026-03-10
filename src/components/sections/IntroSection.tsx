@@ -31,13 +31,13 @@ const IntroSection = () => {
         </div>
 
         {/* Name */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-up-delay-1 text-foreground" style={{ fontFamily: "'Whyte Inktrap', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-up-delay-1 text-foreground" style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 700 }}>
           <span>Jascore</span>
           <span>.aep</span>
         </h1>
 
         {/* Tagline */}
-        <p className="text-xl md:text-2xl text-muted-foreground font-medium mb-12 animate-fade-up-delay-2" style={{ fontFamily: "'Whyte Inktrap', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+        <p className="text-xl md:text-2xl text-muted-foreground mb-12 animate-fade-up-delay-2" style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 500 }}>
           Apple Style UI/UX Motion Graphics
         </p>
 

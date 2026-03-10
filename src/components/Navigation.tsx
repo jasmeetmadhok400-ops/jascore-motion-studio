@@ -23,7 +23,7 @@ const Navigation = () => {
         {/* Logo on the left */}
         <span 
           className="text-lg font-bold text-foreground"
-          style={{ fontFamily: "'Whyte Inktrap', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}
+          style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 700 }}
         >
           Jascore
         </span>
@@ -34,9 +34,8 @@ const Navigation = () => {
             <button
               key={item.label}
               onClick={() => handleClick(item.href)}
-              className={cn(
-                "text-sm font-medium text-foreground hover:text-muted-foreground transition-colors duration-200"
-              )}
+              className="text-sm text-foreground hover:text-muted-foreground transition-colors duration-200"
+              style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 300 }}
             >
               {item.label}
             </button>
