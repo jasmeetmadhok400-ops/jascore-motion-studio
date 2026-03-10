@@ -6,7 +6,7 @@ interface VideoCardProps {
   poster?: string;
   title: string;
   description?: string;
-  aspectRatio?: "16/9" | "1/1";
+  aspectRatio?: "16/9" | "1/1" | "9/16";
   className?: string;
   cropVertical?: boolean;
   whiteOverlay?: boolean;
