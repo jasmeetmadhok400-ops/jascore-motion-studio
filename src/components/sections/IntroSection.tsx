@@ -31,7 +31,7 @@ const IntroSection = () => {
         </div>
 
         {/* Name */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-up-delay-1 text-foreground" style={{ fontFamily: "'Whyte Inktrap', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-up-delay-1 text-foreground" style={{ fontFamily: "'SF UI Text', sans-serif", fontWeight: 700 }}>
           <span>Jascore</span>
           <span>.aep</span>
         </h1>
