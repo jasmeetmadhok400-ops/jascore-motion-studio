@@ -80,7 +80,7 @@ const VideoCard = ({
   return (
     <div
       className={`video-container group cursor-pointer ${className}`}
-      style={{ aspectRatio }}
+      style={{ aspectRatio: className.includes('h-full') ? undefined : aspectRatio }}
       onClick={handleClick}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
